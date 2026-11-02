@@ -92,14 +92,30 @@ blockquote { font-family: "Gowun Batang", serif; font-size: 1.3rem; border-left:
 .channels a:hover { border-color: var(--accent); }
 .channels span { display: block; font-weight: 400; color: var(--muted); font-size: 0.82rem; }
 
-/* 경력 */
-.timeline { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--line); }
-.timeline li { padding: 0 0 36px 28px; position: relative; display: grid; grid-template-columns: 170px 1fr; gap: 16px; }
-.timeline li::before { content: ""; position: absolute; left: -7px; top: 9px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--bg); }
-.period { color: var(--muted); font-size: 0.9rem; padding-top: 2px; }
-.timeline h3 { margin: 0; font-size: 1.15rem; }
-.timeline em { font-style: normal; color: var(--muted); font-weight: 400; font-size: 0.9rem; margin-left: 6px; }
-.timeline p { margin: 6px 0 0; color: #cfccc5; font-size: 0.95rem; }
+/* 경력 (아코디언: 연도를 누르면 펼쳐짐) */
+.years { display: grid; gap: 14px; }
+.year-group { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; transition: border-color .2s; }
+.year-group[open], .year-group:hover { border-color: #3a3a44; }
+.year-group summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; }
+.year-group summary::-webkit-details-marker { display: none; }
+.y { font-size: 1.3rem; font-weight: 900; }
+.count { color: var(--muted); font-size: 0.88rem; display: flex; align-items: center; gap: 12px; }
+.count::after { content: ""; width: 8px; height: 8px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); transition: transform .25s; margin-top: -4px; }
+.year-group[open] .count::after { transform: rotate(-135deg); margin-top: 4px; }
+.entries { list-style: none; margin: 0; padding: 0 24px 8px; border-top: 1px solid var(--line); animation: open .3s ease; }
+@keyframes open { from { opacity: 0; transform: translateY(-6px); } }
+.entries li { position: relative; padding: 18px 0 18px 26px; border-bottom: 1px solid var(--line); }
+.entries li:last-child { border-bottom: 0; }
+.entries li::before { content: ""; position: absolute; left: 0; top: 25px; width: 10px; height: 10px; border-radius: 50%; background: var(--dot, var(--accent)); }
+.entries .when { margin: 0; color: var(--muted); font-size: 0.82rem; }
+.kind { margin-left: 6px; font-size: 0.72rem; font-weight: 700; padding: 1px 8px; border-radius: 999px; color: var(--dot, var(--accent)); background: color-mix(in srgb, var(--dot, var(--accent)) 16%, transparent); }
+.entries h3 { margin: 4px 0 0; font-size: 1.05rem; }
+.entries .org { margin: 2px 0 0; color: var(--dot, var(--accent)); font-size: 0.88rem; }
+.entries .desc { margin: 6px 0 0; color: #cfccc5; font-size: 0.92rem; }
+.k-run { --dot: #ff4d3d; }
+.k-make { --dot: #ffb03d; }
+.k-job { --dot: #5ab0ff; }
+.k-edu { --dot: #9d8cff; }
 
 /* 역량 */
 .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
@@ -119,7 +135,7 @@ footer { text-align: center; padding: 32px 16px; color: var(--muted); font-size:
   .nav { padding: 12px 16px; }
   .nav nav a { margin-left: 10px; font-size: 0.8rem; }
   .stats { gap: 28px; }
-  .timeline li { grid-template-columns: 1fr; gap: 2px; }
+  .year-group summary, .entries { padding-left: 16px; padding-right: 16px; }
 }
 
 /* 프로필 사진 */
