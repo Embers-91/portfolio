@@ -1,0 +1,132 @@
+:root {
+  --bg: #0f0f11;
+  --surface: #18181c;
+  --surface-2: #222228;
+  --text: #f2f0eb;
+  --muted: #9a978f;
+  --accent: #ff4d3d;
+  --line: #2a2a31;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+a { color: inherit; text-decoration: none; }
+b { color: #fff; font-weight: 700; }
+
+/* 상단 메뉴 */
+.nav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 24px;
+  background: rgba(15, 15, 17, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.logo { font-weight: 900; letter-spacing: 0.05em; }
+.logo span { color: var(--accent); }
+.nav nav a { margin-left: 20px; color: var(--muted); font-size: 0.92rem; transition: color .2s; }
+.nav nav a:hover { color: var(--text); }
+
+main { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+section { padding: 96px 0; border-bottom: 1px solid var(--line); }
+section:last-child { border-bottom: 0; }
+.label { color: var(--accent); font-size: 0.78rem; letter-spacing: 0.3em; font-weight: 700; margin: 0 0 8px; }
+h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 32px; font-weight: 900; }
+h2 small { font-size: 0.9rem; color: var(--muted); font-weight: 400; margin-left: 8px; }
+.sub { color: var(--muted); margin: -20px 0 28px; }
+
+/* 첫 화면 */
+.hero { text-align: center; padding: 120px 0 80px; min-height: 88vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.eyebrow { letter-spacing: 0.3em; color: var(--muted); font-size: 0.78rem; margin: 0; display: flex; align-items: center; gap: 10px; }
+.rec { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); animation: blink 1.4s infinite; }
+@keyframes blink { 50% { opacity: .2; } }
+.hero h1 { font-size: clamp(3.2rem, 11vw, 6rem); margin: 12px 0 0; font-weight: 900; line-height: 1.1; }
+.en { color: var(--muted); letter-spacing: 0.2em; margin: 4px 0 24px; font-size: 0.9rem; }
+.tagline { font-family: "Gowun Batang", serif; font-size: clamp(1.1rem, 2.6vw, 1.35rem); margin: 0; }
+.buttons { margin: 36px 0 56px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn { padding: 12px 28px; border: 1px solid var(--muted); border-radius: 999px; transition: .2s; }
+.btn:hover { transform: translateY(-2px); border-color: var(--text); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+.stats { list-style: none; padding: 0; margin: 0; display: flex; gap: 48px; justify-content: center; flex-wrap: wrap; }
+.stats strong { display: block; font-size: 2.4rem; font-weight: 900; line-height: 1.2; }
+.stats small { font-size: 1rem; color: var(--accent); margin-left: 2px; }
+.stats span { color: var(--muted); font-size: 0.88rem; }
+.scroll { margin-top: 64px; font-size: 0.7rem; letter-spacing: 0.3em; color: var(--muted); }
+
+/* 소개 */
+blockquote { font-family: "Gowun Batang", serif; font-size: 1.3rem; border-left: 3px solid var(--accent); margin: 0 0 28px; padding-left: 20px; }
+#about p { color: #cfccc5; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; margin-top: 36px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px; transition: .2s; }
+.card:hover { border-color: var(--accent); }
+.card .icon { font-size: 1.6rem; }
+.card h3 { margin: 8px 0 2px; font-size: 1.1rem; }
+.card p { margin: 0; color: var(--muted) !important; font-size: 0.9rem; }
+
+/* 작업 */
+.works { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.work { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; transition: .25s; display: block; }
+.work:hover { transform: translateY(-4px); border-color: var(--accent); }
+.thumb {
+  aspect-ratio: 16 / 9; position: relative;
+  background: var(--img) center / cover no-repeat, linear-gradient(135deg, #2b2b33, #3d1c1a);
+  display: grid; place-items: center;
+}
+.play { width: 52px; height: 52px; border-radius: 50%; background: rgba(0,0,0,.6); display: grid; place-items: center; font-size: 1.1rem; transition: .2s; }
+.work:hover .play { background: var(--accent); }
+.work-body { padding: 16px 18px 20px; }
+.work-body h3 { margin: 8px 0 2px; font-size: 1.1rem; }
+.work-body p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.tag { font-size: 0.75rem; padding: 2px 10px; border-radius: 999px; background: rgba(255, 77, 61, .15); color: var(--accent); font-weight: 700; }
+.year { font-size: 0.8rem; color: var(--muted); margin-left: 8px; }
+.channels-title { margin: 56px 0 16px; font-size: 1.1rem; }
+.channels { display: grid; grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)); gap: 12px; }
+.channels a { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; font-weight: 700; transition: .2s; }
+.channels a:hover { border-color: var(--accent); }
+.channels span { display: block; font-weight: 400; color: var(--muted); font-size: 0.82rem; }
+
+/* 경력 */
+.timeline { list-style: none; padding: 0; margin: 0; border-left: 2px solid var(--line); }
+.timeline li { padding: 0 0 36px 28px; position: relative; display: grid; grid-template-columns: 170px 1fr; gap: 16px; }
+.timeline li::before { content: ""; position: absolute; left: -7px; top: 9px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--bg); }
+.period { color: var(--muted); font-size: 0.9rem; padding-top: 2px; }
+.timeline h3 { margin: 0; font-size: 1.15rem; }
+.timeline em { font-style: normal; color: var(--muted); font-weight: 400; font-size: 0.9rem; margin-left: 6px; }
+.timeline p { margin: 6px 0 0; color: #cfccc5; font-size: 0.95rem; }
+
+/* 역량 */
+.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.skills > div { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+.skills h3 { margin: 0 0 10px; color: var(--accent); font-size: 1rem; }
+.skills ul { list-style: none; padding: 0; margin: 0; }
+.skills li { padding: 4px 0; color: #cfccc5; }
+
+
+/* 연락처 */
+.contact { text-align: center; }
+.email { display: inline-block; margin-top: 16px; font-size: 1.15rem; padding: 14px 32px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); transition: .2s; }
+.email:hover { border-color: var(--accent); }
+footer { text-align: center; padding: 32px 16px; color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); }
+
+@media (max-width: 640px) {
+  .nav { padding: 12px 16px; }
+  .nav nav a { margin-left: 10px; font-size: 0.8rem; }
+  .stats { gap: 28px; }
+  .timeline li { grid-template-columns: 1fr; gap: 2px; }
+}
+
+/* 프로필 사진 */
+.photo { width: 132px; height: 132px; border-radius: 50%; object-fit: cover; margin-bottom: 28px; border: 2px solid var(--line); }
+.photo.placeholder { display: grid; place-items: center; background: var(--surface-2); color: var(--muted); font-size: 0.75rem; letter-spacing: 0.25em; border-style: dashed; }
+
+/* 채널 운영 카드 (강조) */
+.channels a { padding: 20px 20px 18px; font-size: 1.05rem; }
+.channels em { display: block; font-style: normal; color: var(--accent); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; }
+.sub2 { color: var(--muted); margin: -8px 0 20px; font-size: 0.9rem; }
