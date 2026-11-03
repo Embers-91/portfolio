@@ -103,7 +103,7 @@ const PROJECTS = [
     summary: "신협중앙회 유튜브 채널의 운영 총괄(PM)로서, 콘텐츠 기획·연출부터 품질 관리까지 책임졌습니다.",
     highlight: "운영 총괄(PM) · 본과업 외 추가 수의계약",
     tags: ["금융", "채널 운영 PM", "브랜드 스토리"],
-    channel: "",
+    channel: "https://www.youtube.com/@nacufok",
     tasks: [
       "연간 KPI 파악 및 콘텐츠 스케줄링",
       "발주처 전담 커뮤니케이션",
