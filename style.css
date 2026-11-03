@@ -150,3 +150,40 @@ footer { text-align: center; padding: 32px 16px; color: var(--muted); font-size:
 .channels a { overflow-wrap: anywhere; min-width: 0; }
 .channels a { font-size: 1rem; line-height: 1.45; }
 .channels span { margin-top: 6px; line-height: 1.5; }
+
+/* 채널 운영 프로젝트 카드 */
+.projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.project { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; transition: .25s; }
+.project:hover { transform: translateY(-4px); border-color: #3a3a44; }
+.project-cover { position: relative; aspect-ratio: 16 / 8; padding: 18px 20px; display: flex; flex-direction: column; justify-content: flex-end; background-blend-mode: multiply; }
+.project-cover h3 { margin: 6px 0 0; font-size: 1.2rem; line-height: 1.35; }
+.project-cover p { margin: 0; font-size: 0.85rem; color: rgba(255,255,255,.75); }
+.pyear { align-self: flex-start; font-size: 0.75rem; font-weight: 700; padding: 2px 10px; border-radius: 999px; background: rgba(255,255,255,.18); }
+.vbadge { position: absolute; top: 14px; right: 14px; font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; background: var(--accent); }
+.project-body { padding: 18px 20px; flex: 1; }
+.phl { margin: 0 0 8px; color: var(--accent); font-weight: 700; font-size: 0.92rem; }
+.pdesc { margin: 0 0 14px; color: #cfccc5; font-size: 0.92rem; line-height: 1.7; }
+.ptags { display: flex; flex-wrap: wrap; gap: 6px; }
+.ptags span { font-size: 0.75rem; padding: 3px 10px; border-radius: 999px; background: var(--surface-2); color: var(--muted); }
+.project-foot { all: unset; cursor: pointer; display: flex; justify-content: space-between; padding: 14px 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.88rem; font-family: inherit; transition: .2s; }
+.project-foot:hover, .project-foot:focus-visible { color: var(--text); background: var(--surface-2); }
+.project-foot span { transition: transform .2s; }
+.project-foot:hover span { transform: translateX(4px); }
+
+/* 자세히 보기 창 */
+#detail { width: min(720px, calc(100vw - 32px)); max-height: calc(100vh - 48px); padding: 0; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); color: var(--text); overflow: auto; }
+#detail::backdrop { background: rgba(0,0,0,.7); backdrop-filter: blur(4px); }
+#detail[open] { animation: pop .25s ease; }
+@keyframes pop { from { opacity: 0; transform: translateY(12px); } }
+.d-close { position: sticky; top: 12px; float: right; margin: 12px 12px 0 0; z-index: 2; width: 36px; height: 36px; border-radius: 50%; border: 0; background: rgba(0,0,0,.5); color: #fff; font-size: 1rem; cursor: pointer; }
+.d-cover { padding: 48px 28px 24px; }
+.d-cover h3 { margin: 8px 0 0; font-size: 1.6rem; }
+.d-cover p { margin: 0; color: rgba(255,255,255,.75); }
+.d-content { padding: 24px 28px 32px; }
+.d-summary { margin: 0 0 8px; font-size: 1.02rem; }
+.d-content h4 { margin: 24px 0 10px; color: var(--accent); font-size: 0.85rem; letter-spacing: 0.1em; }
+.d-content ul { margin: 0; padding-left: 18px; color: #cfccc5; }
+.d-videos { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+.d-videos a { display: block; border-radius: 12px; overflow: hidden; background: var(--surface-2); }
+.d-videos p { margin: 0; padding: 10px 12px; font-size: 0.88rem; }
+.d-channel { display: inline-block; margin-top: 24px; color: var(--accent); font-weight: 700; }
