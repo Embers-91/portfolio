@@ -30,13 +30,13 @@ const PROJECTS = [
       "롱폼·숏폼 정규 시리즈 4종 기획·운영"
     ],
     videos: [
-      { id: "PSZursdpG8Y", title: "누비가 간다" },
-      { id: "CdzUM1V_vKg", title: "에너지포커스" }
+      { id: "PSZursdpG8Y", title: "누비가 간다", roles: ["기획", "연출", "편집"] },
+      { id: "CdzUM1V_vKg", title: "에너지포커스", roles: ["기획", "편집"] }
     ],
     shorts: [
-      { id: "qfNqG4b-Tp0", title: "DJ 누비의 똑똑한 라디오" },
-      { id: "FBwFw8zt8CQ", title: "에너가드" },
-      { id: "uAJxd9QxwMU", title: "기획영상" }
+      { id: "qfNqG4b-Tp0", title: "DJ 누비의 똑똑한 라디오", roles: ["기획", "편집"] },
+      { id: "FBwFw8zt8CQ", title: "에너가드", roles: ["기획", "편집"] },
+      { id: "uAJxd9QxwMU", title: "기획영상", roles: ["기획"] }
     ]
   },
   {
@@ -90,13 +90,13 @@ const PROJECTS = [
       "본과업 외 수의계약 진행: 운영 성과를 바탕으로 추가 과업 수주"
     ],
     videos: [
-      { id: "BQS_ZqDI26k", title: "We will lock you" },
-      { id: "R5jRe3May3k", title: "개인정보연대기" },
-      { id: "e3mWOMz1WIA", title: "웹드라마" }
+      { id: "BQS_ZqDI26k", title: "We will lock you", roles: ["기획", "촬영"] },
+      { id: "R5jRe3May3k", title: "개인정보연대기", roles: ["기획", "편집"] },
+      { id: "e3mWOMz1WIA", title: "웹드라마", roles: ["기획", "연출", "편집"] }
     ],
     shorts: [
-      { id: "5iQj81MiL6U", title: "개인정보를부탁해" },
-      { id: "Qgaw9BwNIDA", title: "내정보지킴이" }
+      { id: "5iQj81MiL6U", title: "개인정보를부탁해", roles: ["기획", "편집"] },
+      { id: "Qgaw9BwNIDA", title: "내정보지킴이", roles: ["기획", "촬영", "편집"] }
     ]
   },
   {
@@ -119,8 +119,8 @@ const PROJECTS = [
       "본과업 외 수의계약 진행: 운영 성과를 바탕으로 추가 과업 수주"
     ],
     videos: [
-      { id: "A-jrHSSHYjc", title: "CU story" },
-      { id: "m7I_ky8von4", title: "스쿨어택" }
+      { id: "A-jrHSSHYjc", title: "CU story", roles: ["기획", "촬영", "편집"] },
+      { id: "m7I_ky8von4", title: "스쿨어택", roles: ["기획", "촬영", "편집"] }
     ]
   },
   {
