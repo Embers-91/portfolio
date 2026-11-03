@@ -98,16 +98,24 @@ const PROJECTS = [
   {
     name: "신협중앙회",
     year: "2025",
-    role: "유튜브 채널 콘텐츠 운영 총괄",
+    role: "유튜브 채널 운영 총괄 (PM)",
     color: ["#0d5c8c", "#06263b"],
-    summary: "금융협동조합의 브랜드 이야기를 'CU story' 시리즈로 기획해 채널을 운영했습니다.",
-    highlight: "운영 총괄 · 브랜드 스토리",
-    tags: ["금융", "브랜드 스토리", "시리즈 기획"],
+    summary: "신협중앙회 유튜브 채널의 운영 총괄(PM)로서, 콘텐츠 기획·연출부터 품질 관리까지 책임졌습니다.",
+    highlight: "운영 총괄(PM) · 본과업 외 추가 수의계약",
+    tags: ["금융", "채널 운영 PM", "브랜드 스토리"],
     channel: "",
-    tasks: ["채널 콘텐츠 운영 총괄", "브랜드 스토리 시리즈 CU story 기획·제작"],
-    results: [],
+    tasks: [
+      "연간 KPI 파악 및 콘텐츠 스케줄링",
+      "발주처 전담 커뮤니케이션",
+      "기획·연출·촬영·편집 등 제작 전 과정 진행",
+      "롱폼 [CU story] · [스쿨어택] 시리즈 기획"
+    ],
+    results: [
+      "본과업 외 수의계약 진행: 운영 성과를 바탕으로 추가 과업 수주"
+    ],
     videos: [
-      { id: "A-jrHSSHYjc", title: "CU story" }
+      { id: "A-jrHSSHYjc", title: "CU story" },
+      { id: "m7I_ky8von4", title: "스쿨어택" }
     ]
   },
   {
