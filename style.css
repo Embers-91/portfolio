@@ -92,26 +92,32 @@ blockquote { font-family: "Gowun Batang", serif; font-size: 1.3rem; border-left:
 .channels a:hover { border-color: var(--accent); }
 .channels span { display: block; font-weight: 400; color: var(--muted); font-size: 0.82rem; }
 
-/* 경력 (아코디언: 연도를 누르면 펼쳐짐) */
+/* 경력 (회사별 아코디언) */
 .years { display: grid; gap: 14px; }
 .year-group { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; transition: border-color .2s; }
 .year-group[open], .year-group:hover { border-color: #3a3a44; }
-.year-group summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; }
+.year-group summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; }
 .year-group summary::-webkit-details-marker { display: none; }
-.y { font-size: 1.3rem; font-weight: 900; }
-.count { color: var(--muted); font-size: 0.88rem; display: flex; align-items: center; gap: 12px; }
+.co { display: flex; flex-direction: column; min-width: 0; }
+.y { font-size: 1.2rem; font-weight: 900; line-height: 1.4; }
+.co-meta { color: var(--muted); font-size: 0.86rem; }
+.count { flex-shrink: 0; color: var(--accent); font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; gap: 12px; }
 .count::after { content: ""; width: 8px; height: 8px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); transition: transform .25s; margin-top: -4px; }
 .year-group[open] .count::after { transform: rotate(-135deg); margin-top: 4px; }
-.entries { list-style: none; margin: 0; padding: 0 24px 8px; border-top: 1px solid var(--line); animation: open .3s ease; }
+.year-group.edu .count { color: var(--muted); }
+.entries { padding: 4px 24px 12px; border-top: 1px solid var(--line); animation: open .3s ease; }
 @keyframes open { from { opacity: 0; transform: translateY(-6px); } }
-.entries li { position: relative; padding: 18px 0 18px 26px; border-bottom: 1px solid var(--line); }
+.co-ov { margin: 14px 0 6px; color: #cfccc5; font-size: 0.95rem; }
+.entries ol { list-style: none; margin: 0; padding: 0; }
+.entries li { position: relative; display: grid; grid-template-columns: 64px auto 1fr; align-items: baseline; column-gap: 10px; padding: 12px 0 12px 20px; border-bottom: 1px solid var(--line); }
 .entries li:last-child { border-bottom: 0; }
-.entries li::before { content: ""; position: absolute; left: 0; top: 25px; width: 10px; height: 10px; border-radius: 50%; background: var(--dot, var(--accent)); }
-.entries .when { margin: 0; color: var(--muted); font-size: 0.82rem; }
-.kind { margin-left: 6px; font-size: 0.72rem; font-weight: 700; padding: 1px 8px; border-radius: 999px; color: var(--dot, var(--accent)); background: color-mix(in srgb, var(--dot, var(--accent)) 16%, transparent); }
-.entries h3 { margin: 4px 0 0; font-size: 1.05rem; }
-.entries .org { margin: 2px 0 0; color: var(--dot, var(--accent)); font-size: 0.88rem; }
-.entries .desc { margin: 6px 0 0; color: #cfccc5; font-size: 0.92rem; }
+.entries li::before { content: ""; position: absolute; left: 0; top: 19px; width: 8px; height: 8px; border-radius: 50%; background: var(--dot, var(--accent)); }
+.entries .when { grid-column: 1; color: var(--muted); font-size: 0.82rem; }
+.kind { grid-column: 2; font-size: 0.7rem; font-weight: 700; padding: 1px 8px; border-radius: 999px; color: var(--dot, var(--accent)); background: color-mix(in srgb, var(--dot, var(--accent)) 16%, transparent); }
+.entries h3 { grid-column: 3; margin: 0; font-size: 0.98rem; }
+.entries .desc { grid-column: 3; margin: 2px 0 0; color: var(--muted); font-size: 0.86rem; }
+.entries li:not(:has(.when)) .kind { grid-column: 1; justify-self: start; }
+.entries li:not(:has(.when)) h3, .entries li:not(:has(.when)) .desc { grid-column: 2 / 4; }
 .k-run { --dot: #ff4d3d; }
 .k-make { --dot: #ffb03d; }
 .k-job { --dot: #5ab0ff; }
@@ -136,6 +142,9 @@ footer { text-align: center; padding: 32px 16px; color: var(--muted); font-size:
   .nav nav a { margin-left: 10px; font-size: 0.8rem; }
   .stats { gap: 28px; }
   .year-group summary, .entries { padding-left: 16px; padding-right: 16px; }
+  .entries li { grid-template-columns: auto 1fr; }
+  .entries .when { grid-column: 1; } .entries .kind { grid-column: 2; justify-self: start; }
+  .entries h3, .entries .desc, .entries li:not(:has(.when)) h3, .entries li:not(:has(.when)) .desc { grid-column: 1 / 3; }
 }
 
 /* 프로필 사진 */
@@ -200,3 +209,5 @@ footer { text-align: center; padding: 32px 16px; color: var(--muted); font-size:
 .work-body .vroles { padding: 10px 0 0; margin: 0; }
 .award-head { color: #ffcf5a !important; font-weight: 700; margin: 0 0 4px !important; }
 .awards { margin: 0; padding-left: 16px; color: var(--muted); font-size: 0.82rem; line-height: 1.6; }
+.year-group.edu summary { cursor: default; }
+.year-group.edu .count::after { display: none; }
