@@ -13,7 +13,8 @@ const PROJECTS = [
     year: "2026",
     role: "유튜브 채널 운영 총괄 (PM)",
     color: ["#1f3b73", "#0f1d3a"],
-    summary: "한국석유공사 유튜브 채널의 운영 총괄(PM)로서, 연간 KPI 달성을 위해 롱폼·숏폼 콘텐츠의 기획·연출과 품질 관리를 책임졌습니다.",
+    summary: "에너지 공기업의 딱딱한 이야기를 '누비' 시리즈로 친근하게 풀어낸 채널",
+    mission: "국가 에너지를 책임지는 공기업의 이야기를 대중이 친근하게 즐길 수 있는 콘텐츠로 바꾸는 것. 롱폼 [누비가 간다]·[에너지포커스]와 숏폼 [DJ 누비의 똑똑한 라디오]·[에너가드]로 채널의 얼굴을 만들고, 운영 총괄(PM)로서 연간 KPI에 맞춘 기획·연출과 품질 관리를 책임졌습니다.",
     highlight: "운영 총괄(PM) · 본과업 외 추가 수의계약",
     tags: ["공기업", "채널 운영 PM", "정규 시리즈"],
     channel: "https://www.youtube.com/@Knocpr/featured",
@@ -43,7 +44,8 @@ const PROJECTS = [
     year: "2026",
     role: "유튜브 채널 운영 총괄 (PM)",
     color: ["#1d6b5a", "#0b2f28"],
-    summary: "서울시50플러스재단 유튜브 채널의 운영 총괄(PM)로서, 콘텐츠 기획·연출부터 품질 관리까지 책임졌습니다.",
+    summary: "인생 2막을 준비하는 중장년의 고민과 도전을 담은 채널",
+    mission: "인생 2막을 준비하는 50+ 세대가 \"내 이야기\"라고 느끼는 채널을 만드는 것. [어쩌다중년]·[마음 상담소] 롱폼과 [다시오피스]·[오공이] 숏폼으로 중장년의 일, 마음, 일상을 담았고, 운영 총괄(PM)로서 기획부터 촬영·편집까지 직접 이끌었습니다.",
     highlight: "운영 총괄(PM) · 3개월 만에 KPI 공정률 40%",
     tags: ["공공재단", "채널 운영 PM", "풀 프로덕션"],
     channel: "https://www.youtube.com/@seoul50plus",
@@ -72,7 +74,8 @@ const PROJECTS = [
     year: "2025",
     role: "유튜브 채널 운영 총괄 (PM)",
     color: ["#4b2a7a", "#1f1236"],
-    summary: "개인정보보호위원회 유튜브 채널의 운영 총괄(PM)로서, 콘텐츠 기획·연출부터 품질 관리까지 책임졌습니다.",
+    summary: "어려운 개인정보 정책을 드라마와 숏폼으로 일상의 언어로 바꾼 채널",
+    mission: "어렵고 멀게 느껴지는 개인정보 보호 정책을 국민의 일상 언어로 번역하는 것. 웹드라마, [We will lock you]·[개인정보연대기] 롱폼과 [개인정보를부탁해]·[내정보지킴이] 숏폼으로 \"내 정보는 내가 지킨다\"는 메시지를 전했고, 운영 총괄(PM)로서 6개월 만에 KPI를 100%까지 끌어올렸습니다.",
     highlight: "운영 총괄(PM) · 6개월 만에 KPI 공정률 100%",
     tags: ["정부기관", "채널 운영 PM", "웹드라마"],
     channel: "https://www.youtube.com/@pipc_pr/featured",
@@ -101,7 +104,8 @@ const PROJECTS = [
     year: "2025",
     role: "유튜브 채널 운영 총괄 (PM)",
     color: ["#0d5c8c", "#06263b"],
-    summary: "신협중앙회 유튜브 채널의 운영 총괄(PM)로서, 콘텐츠 기획·연출부터 품질 관리까지 책임졌습니다.",
+    summary: "협동조합 금융 신협의 가치를 사람의 이야기로 전한 브랜드 채널",
+    mission: "숫자와 상품이 아닌 '사람'으로 신협이라는 브랜드를 기억하게 만드는 것. [CU story]·[스쿨어택] 롱폼 시리즈로 협동조합 금융의 가치와 현장의 이야기를 담았고, 운영 총괄(PM)로서 기획·연출부터 품질 관리까지 책임졌습니다.",
     highlight: "운영 총괄(PM) · 본과업 외 추가 수의계약",
     tags: ["금융", "채널 운영 PM", "브랜드 스토리"],
     channel: "https://www.youtube.com/@nacufok",
@@ -124,7 +128,8 @@ const PROJECTS = [
     year: "2024–25",
     role: "유튜브 채널 운영 총괄 (PM)",
     color: ["#8a2a2a", "#3a0f0f"],
-    summary: "한국도박문제예방치유원 유튜브 채널의 운영 총괄(PM)로서, 콘텐츠 기획·연출부터 품질 관리까지 책임졌습니다.",
+    summary: "도박 문제를 경고가 아닌 공감과 재미로 전한 예방 채널",
+    mission: "\"도박은 위험하다\"는 경고를 넘어, 시청자가 끝까지 보고 공감하는 예방 콘텐츠를 만드는 것. 정신과 전문의 인터뷰부터 웹드라마, 예능 [단도박예능]·[복면타짜]까지 포맷을 넓혔고, 운영 총괄(PM)로 2년 연속 수주를 이끌었습니다.",
     highlight: "운영 총괄(PM) · 2년 연속 수주",
     tags: ["공공기관", "채널 운영 PM", "예능·웹드라마"],
     channel: "https://www.youtube.com/@1336./featured",
@@ -188,7 +193,7 @@ const PROJECTS = [
         <p>${esc(p.role)}</p>
       </div>
       <div class="d-content">
-        <h4>미션</h4><p class="d-summary">${esc(p.summary)}</p>
+        <h4>미션</h4><p class="d-summary">${esc(p.mission || p.summary)}</p>
         ${list("주요 역할", p.tasks)}
         ${list("주요 성과", p.results, "check")}
         ${p.videos.length ? `<h4>${(p.shorts || []).length ? "롱폼" : "관련 영상"}</h4><div class="d-videos">${p.videos.map((v) => `
