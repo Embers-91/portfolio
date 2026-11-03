@@ -69,16 +69,30 @@ const PROJECTS = [
   {
     name: "개인정보보호위원회",
     year: "2025",
-    role: "유튜브 채널 콘텐츠 운영 총괄",
+    role: "유튜브 채널 운영 총괄 (PM)",
     color: ["#4b2a7a", "#1f1236"],
-    summary: "정부 위원회 채널을 운영하며, 어려운 개인정보 이슈를 드라마형 콘텐츠로 풀어냈습니다.",
-    highlight: "운영 총괄 · 드라마형 콘텐츠",
-    tags: ["정부기관", "드라마", "공익 메시지"],
+    summary: "개인정보보호위원회 유튜브 채널의 운영 총괄(PM)로서, 콘텐츠 기획·연출부터 품질 관리까지 책임졌습니다.",
+    highlight: "운영 총괄(PM) · 6개월 만에 KPI 공정률 100%",
+    tags: ["정부기관", "채널 운영 PM", "웹드라마"],
     channel: "https://www.youtube.com/@pipc_pr/featured",
-    tasks: ["채널 콘텐츠 운영 총괄", "드라마형 콘텐츠 기획·제작"],
-    results: [],
+    tasks: [
+      "연간 KPI 파악 및 콘텐츠 스케줄링",
+      "발주처 전담 커뮤니케이션",
+      "기획·연출·촬영·편집 등 제작 전 과정 진행",
+      "롱폼 [We will lock you] · [개인정보연대기] · 웹드라마, 숏폼 [개인정보를부탁해] · [내정보지킴이] 기획"
+    ],
+    results: [
+      "6개월 만에 KPI 공정률 30% → 100% 달성",
+      "본과업 외 수의계약 진행: 운영 성과를 바탕으로 추가 과업 수주"
+    ],
     videos: [
-      { id: "EWGxjGXvF3k", title: "드라마형 콘텐츠" }
+      { id: "BQS_ZqDI26k", title: "We will lock you" },
+      { id: "R5jRe3May3k", title: "개인정보연대기" },
+      { id: "e3mWOMz1WIA", title: "웹드라마" }
+    ],
+    shorts: [
+      { id: "5iQj81MiL6U", title: "개인정보를부탁해" },
+      { id: "Qgaw9BwNIDA", title: "내정보지킴이" }
     ]
   },
   {
