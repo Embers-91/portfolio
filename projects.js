@@ -5,6 +5,7 @@
   - 내용을 고치려면 따옴표 " " 안의 글자만 바꾸면 돼요.
   - 비어 있는 항목( [] 또는 "" )은 화면에 나타나지 않아요.
   - videos: 유튜브 주소에서 v= 뒤의 11자리(영상 ID)와 제목을 넣어요.
+  - roles: 그 영상에서 맡은 일 (예: ["기획", "연출"]). 없으면 빼도 돼요.
 */
 const PROJECTS = [
   {
@@ -121,16 +122,27 @@ const PROJECTS = [
   {
     name: "한국도박문제예방치유원",
     year: "2024–25",
-    role: "유튜브 채널 콘텐츠 운영 총괄",
+    role: "유튜브 채널 운영 총괄 (PM)",
     color: ["#8a2a2a", "#3a0f0f"],
-    summary: "2년간 공공기관 채널을 맡아 예방·치유 메시지를 꾸준한 콘텐츠로 전달했습니다.",
-    highlight: "운영 총괄 · 2년 연속 운영",
-    tags: ["공공기관", "장기 운영"],
+    summary: "한국도박문제예방치유원 유튜브 채널의 운영 총괄(PM)로서, 콘텐츠 기획·연출부터 품질 관리까지 책임졌습니다.",
+    highlight: "운영 총괄(PM) · 2년 연속 수주",
+    tags: ["공공기관", "채널 운영 PM", "예능·웹드라마"],
     channel: "https://www.youtube.com/@1336./featured",
-    tasks: ["채널 콘텐츠 운영 총괄"],
-    results: [],
+    tasks: [
+      "연간 KPI 파악 및 콘텐츠 스케줄링",
+      "발주처 전담 커뮤니케이션",
+      "기획·연출·촬영·편집 등 제작 전 과정 진행",
+      "전문가 인터뷰, 웹드라마, 예능 등 다양한 포맷 기획"
+    ],
+    results: [
+      "운영 총괄을 맡아 2024~2025 연속 수주",
+      "본과업 외 수의계약 진행: 운영 성과를 바탕으로 추가 과업 수주"
+    ],
     videos: [
-      { id: "NNDwemp847U", title: "대표 콘텐츠" }
+      { id: "nceaTtIJ98c", title: "정신과의사가 알려주는 도박", roles: ["기획", "연출", "편집"] },
+      { id: "nMufZ8mrG2U", title: "웹드라마", roles: ["기획"] },
+      { id: "BGXszy6kr5Y", title: "단도박예능", roles: ["기획", "편집"] },
+      { id: "kmFp6bqs_SU", title: "복면타짜", roles: ["기획", "연출", "편집"] }
     ]
   }
 ];
@@ -182,12 +194,12 @@ const PROJECTS = [
         ${p.videos.length ? `<h4>${(p.shorts || []).length ? "롱폼" : "관련 영상"}</h4><div class="d-videos">${p.videos.map((v) => `
           <a href="https://www.youtube.com/watch?v=${esc(v.id)}" target="_blank" rel="noopener">
             <div class="thumb" style="--img:url('https://img.youtube.com/vi/${esc(v.id)}/hqdefault.jpg')"><span class="play">▶</span></div>
-            <p>${esc(v.title)}</p>
+            <p>${esc(v.title)}</p>${(v.roles || []).length ? `<div class="vroles">${v.roles.map((r) => `<span>${esc(r)}</span>`).join("")}</div>` : ""}
           </a>`).join("")}</div>` : ""}
         ${(p.shorts || []).length ? `<h4>숏폼</h4><div class="d-shorts">${p.shorts.map((v) => `
           <a href="https://www.youtube.com/shorts/${esc(v.id)}" target="_blank" rel="noopener">
             <div class="thumb" style="--img:url('https://img.youtube.com/vi/${esc(v.id)}/hqdefault.jpg')"><span class="play">▶</span></div>
-            <p>${esc(v.title)}</p>
+            <p>${esc(v.title)}</p>${(v.roles || []).length ? `<div class="vroles">${v.roles.map((r) => `<span>${esc(r)}</span>`).join("")}</div>` : ""}
           </a>`).join("")}</div>` : ""}
         ${p.channel ? `<a class="d-channel" href="${esc(p.channel)}" target="_blank" rel="noopener">유튜브 채널 바로가기 →</a>` : ""}
       </div>`;
