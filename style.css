@@ -191,3 +191,7 @@ footer { text-align: center; padding: 32px 16px; color: var(--muted); font-size:
 .d-content ul li { margin: 4px 0; }
 .d-content ul.check { list-style: none; padding-left: 0; }
 .d-content ul.check li::before { content: "✓"; color: var(--accent); font-weight: 700; margin-right: 8px; }
+.d-shorts { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 150px)); gap: 14px; }
+.d-shorts a { display: block; border-radius: 12px; overflow: hidden; background: var(--surface-2); }
+.d-shorts .thumb { aspect-ratio: 9 / 16; }
+.d-shorts p { margin: 0; padding: 10px 12px; font-size: 0.85rem; line-height: 1.45; }
