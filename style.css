@@ -198,3 +198,5 @@ footer { text-align: center; padding: 32px 16px; color: var(--muted); font-size:
 .vroles { display: flex; flex-wrap: wrap; gap: 4px; padding: 0 12px 12px; margin-top: -4px; }
 .vroles span { font-size: 0.7rem; font-weight: 700; padding: 1px 8px; border-radius: 999px; color: var(--accent); background: rgba(255, 77, 61, .14); }
 .work-body .vroles { padding: 10px 0 0; margin: 0; }
+.award-head { color: #ffcf5a !important; font-weight: 700; margin: 0 0 4px !important; }
+.awards { margin: 0; padding-left: 16px; color: var(--muted); font-size: 0.82rem; line-height: 1.6; }
