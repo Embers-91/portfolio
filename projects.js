@@ -10,15 +10,26 @@ const PROJECTS = [
   {
     name: "한국석유공사",
     year: "2026",
-    role: "유튜브 채널 콘텐츠 운영 총괄",
+    role: "유튜브 채널 운영 총괄 (PM)",
     color: ["#1f3b73", "#0f1d3a"],
-    summary: "공기업 공식 유튜브 채널의 콘텐츠 운영을 총괄하며 기획과 연출을 맡았습니다.",
-    highlight: "운영 총괄 · 기획 · 연출",
-    tags: ["공기업", "채널 운영", "기획·연출"],
+    summary: "한국석유공사 유튜브 채널 운영을 총괄(PM)하며 콘텐츠 기획·연출과 품질 관리를 맡았습니다.",
+    highlight: "운영 총괄(PM) · 본과업 외 추가 수의계약",
+    tags: ["공기업", "채널 운영 PM", "정규 시리즈"],
     channel: "https://www.youtube.com/@Knocpr/featured",
-    tasks: ["채널 콘텐츠 운영 총괄", "콘텐츠 기획 및 연출"],
-    results: [],
-    videos: []
+    tasks: [
+      "연간 KPI 파악 및 콘텐츠 스케줄링",
+      "정규 시리즈 [누비가 간다] · [에너지포커스] 기획 및 연출",
+      "촬영·편집 제작 일정 관리와 콘텐츠 품질 검수",
+      "발주처(홍보 담당 부서) 커뮤니케이션 및 보고"
+    ],
+    results: [
+      "본과업 외 수의계약 진행: 운영 성과와 신뢰를 바탕으로 추가 과업 수주",
+      "정규 시리즈 2종 [누비가 간다] · [에너지포커스] 기획·운영"
+    ],
+    videos: [
+      { id: "PSZursdpG8Y", title: "누비가 간다" },
+      { id: "CdzUM1V_vKg", title: "에너지포커스" }
+    ]
   },
   {
     name: "서울시50플러스재단",
@@ -110,7 +121,7 @@ const PROJECTS = [
       <button class="project-foot" data-i="${i}">자세히 보기 <span>→</span></button>
     </article>`).join("");
 
-  const list = (title, items) => items.length ? `<h4>${title}</h4><ul>${items.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : "";
+  const list = (title, items, cls = "") => items.length ? `<h4>${title}</h4><ul class="${cls}">${items.map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : "";
 
   function open(i) {
     const p = PROJECTS[i];
@@ -121,10 +132,10 @@ const PROJECTS = [
         <p>${esc(p.role)}</p>
       </div>
       <div class="d-content">
-        <p class="d-summary">${esc(p.summary)}</p>
-        ${list("담당 업무", p.tasks)}
-        ${list("성과", p.results)}
-        ${p.videos.length ? `<h4>주요 콘텐츠</h4><div class="d-videos">${p.videos.map((v) => `
+        <h4>활동 배경</h4><p class="d-summary">${esc(p.summary)}</p>
+        ${list("주요 역할", p.tasks)}
+        ${list("주요 성과", p.results, "check")}
+        ${p.videos.length ? `<h4>관련 영상</h4><div class="d-videos">${p.videos.map((v) => `
           <a href="https://www.youtube.com/watch?v=${esc(v.id)}" target="_blank" rel="noopener">
             <div class="thumb" style="--img:url('https://img.youtube.com/vi/${esc(v.id)}/hqdefault.jpg')"><span class="play">▶</span></div>
             <p>${esc(v.title)}</p>
