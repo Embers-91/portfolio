@@ -60,13 +60,13 @@ const PROJECTS = [
       "본과업 외 수의계약 진행: 운영 성과를 바탕으로 추가 과업 수주"
     ],
     videos: [
-      { id: "RJu1yQdCXyg", title: "어쩌다중년" },
-      { id: "7yipCjXmhvg", title: "마음 상담소" }
+      { id: "RJu1yQdCXyg", title: "어쩌다중년", roles: ["기획", "촬영", "편집"] },
+      { id: "7yipCjXmhvg", title: "마음 상담소", roles: ["기획", "촬영", "편집"] }
     ],
     shorts: [
-      { id: "tMXnVI7G4xo", title: "다시오피스" },
-      { id: "OCf_vM8cWwk", title: "오공이" },
-      { id: "9F9qDERNj6s", title: "현장스케치" }
+      { id: "tMXnVI7G4xo", title: "다시오피스", roles: ["기획", "연출", "촬영", "편집"] },
+      { id: "OCf_vM8cWwk", title: "오공이", roles: ["기획", "편집"] },
+      { id: "9F9qDERNj6s", title: "현장스케치", roles: ["촬영", "편집"] }
     ]
   },
   {
